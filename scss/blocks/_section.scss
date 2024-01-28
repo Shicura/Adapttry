@@ -1,0 +1,242 @@
+.section {
+  min-height: 100vh;
+
+  background-image: linear-gradient(180deg, rgba(11, 46, 56, 0.76) 0%, rgba(53, 74, 81, 0.28) 50.45%, rgba(49, 74, 82, 0.58) 100%), url(../images/section-top/section-top-bg.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include mobile {
+      column-gap: 10px;
+    }
+  }
+  
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: var(--color-white);
+    line-height: 1.42;
+    position: relative;
+    text-transform: uppercase;
+
+    @include tablet {
+      flex-wrap: wrap;
+      column-gap: 26px;
+    }
+
+    @include mobile {
+      column-gap: 23px;
+    }
+  }
+
+  &__menu-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    
+    @include hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition-duration: var(--transition-duration);
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &-upper {
+    padding-top: 69px;
+    margin-bottom: 80px;
+
+    @include tablet {
+      padding-top: 25px;
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      padding-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    @include tablet {
+      width: 100%;
+      height: 40px;
+    }
+
+    @include tablet {
+      width: 75%;
+      height: 40px;
+    }
+  }
+
+  &__text {
+    max-width: 550px;
+    .heading {
+      color: var(--color-accent);
+      margin-bottom: 10px;
+    }
+
+    .title {
+      color: var(--color-white);
+      margin-bottom: 29px;
+
+      @include tablet {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      span {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  .subtitle {
+    color: var(--color-white);
+    font-weight: 400;
+    margin-bottom: 34px;
+
+    @include tablet {
+        margin-bottom: 18px;
+      }
+  }
+  
+  .last {
+    margin-bottom: 0px;
+  }
+
+  &-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  .form {
+    column-gap: 20px;
+    display: flex;
+    margin-bottom: 17px;
+
+    @include tablet {
+      column-gap: 10px;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      align-items: start;
+    }
+
+    .input {
+      height: var(--input-height);
+      background-color: transparent;
+      border: var(--border);
+      border-radius: var(--border-raidus-small);
+      padding-inline: 16px;
+      color: var(--color-white);
+
+      @include tablet {
+        height: 40px;
+        width: 75%;
+      }
+    }
+  }
+  }
+
+  .agree {
+    margin-bottom: 69px;
+
+    @include tablet {
+        margin-bottom: 17px;
+      }
+  }
+
+  &-label {
+    display: flex;
+    align-items: center;
+    column-gap: 11px;
+  }
+
+  &-label {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .gift {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: url("../images/icons/gift.svg");
+      margin-right: 20px;
+    }
+  }
+
+  &__benefits {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+    background-color: var(--color-bg);
+    border-radius: var(--border-raidus-huge);
+    padding-inline: 60px;
+    padding-block: 60px;
+    align-items: center;
+    margin-bottom: 130px;
+    margin-right: 35px;
+
+    @include tablet {
+      width: 28%;
+      margin-top: 15px;
+      margin-right: 5px;
+    }
+
+    @include mobile {
+      width: 28%;
+      margin-top: 15px;
+      margin-right: 0px;
+    }
+
+    .point {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-img {
+      width: 100px;
+      aspect-ratio: 1;
+
+      @include mobile {
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
+}

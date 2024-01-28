@@ -1,0 +1,29 @@
+.button {
+  @include flex-center(true);
+
+  height: var(--button-height);
+  background-color: var(--color-accent);
+  border-radius: var(--border-raidus-small);
+  color: var(--color-white);
+  padding-inline: 20px;
+  font-weight: 700;
+
+  @include hover {
+    background-color: var(--color-grey);
+    transition-duration: var(--transition-duration);
+  }
+
+    &-white {
+    background-color: var(--color-white);
+    color: var(--color-accent);
+  }
+
+  @include tablet {
+    height: 40px;
+  }
+
+  @include mobile {
+    height: 35px;
+  }
+}
+

@@ -1,0 +1,20 @@
+:root {
+  --color-white: #FFF;
+  --color-black: #111516;
+  --color-grey: #898989;
+  --color-bg: rgba(28, 61, 71, 0.30);
+  --color-blue: #40C9F4;
+  --color-accent: #33C5F3;
+
+  --border: 2px solid var(--color-white);
+  --border-raidus-small: 5px;
+  --border-raidus-large: 10px;
+  --border-raidus-huge: 150px;
+
+  --font-family-base: "Geometria", sans-serif;
+
+  --input-height: 50px;
+  --button-height: 50px;
+
+  --transition-duration: 0.2s;
+}

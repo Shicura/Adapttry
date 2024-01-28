@@ -1,0 +1,18 @@
+.footer {
+  background-color: var(--color-black);
+  padding-block: 60px;
+  text-align: center;
+
+  @include tablet {
+    &__logo {
+      width: 40px;
+      height: auto;
+    }
+
+      padding-block: 45px;
+  }
+
+  @include mobile {
+    padding-block: 28px;
+  }
+}
